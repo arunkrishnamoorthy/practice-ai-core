@@ -1,0 +1,21 @@
+{
+  "name": "exercise2",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --loader ts-node/esm src/chat-completion.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sap-ai-sdk/orchestration": "^1.16.0",
+    "dotenv": "^17.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
