@@ -1,0 +1,22 @@
+{
+  "name": "exercise5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --loader ts-node/esm src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@langchain/openai": "^0.6.2",
+    "dotenv": "^17.2.0",
+    "zod": "^3.25.76"
+  }
+}
