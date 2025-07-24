@@ -1,10 +1,14 @@
 import { Document } from '@langchain/core/documents'
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf"
 import path from 'node:path'
-import { ChatOpenAI } from '@langchain/openai'
+import { ChatOpenAI,OpenAIEmbeddings } from '@langchain/openai'
 import { ChatPromptTemplate } from "@langchain/core/prompts"
 import { configDotenv } from 'dotenv'
 import { createStuffDocumentsChain } from 'langchain/chains/combine_documents'
+import { CheerioWebBaseLoader } from '@langchain/community/document_loaders/web/cheerio'
+import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter'
+import { MemoryVectorStore } from 'langchain/vectorstores/memory'
+import { createRetrievalChain } from 'langchain/chains/retrieval'
 
 configDotenv()
 
@@ -45,11 +49,38 @@ const chain = await createStuffDocumentsChain({
     prompt
 })
 
-// const input = 'Give me a summary of nike annual report in 2023'
-const input = 'What is LCEL?'
-const response = await chain.invoke({
+
+const webLoader = new CheerioWebBaseLoader('https://js.langchain.com/docs/concepts/lcel/')
+const webDocs = await webLoader.load()
+
+const splitter = new RecursiveCharacterTextSplitter({
+    chunkSize: 1000,
+    chunkOverlap: 200
+})
+
+const splitDocs = await splitter.splitDocuments(webDocs)
+const nikeSplitDocs = await splitter.splitDocuments(docs)
+console.log('Nike Documents', nikeSplitDocs.length)
+
+const embeddings = new OpenAIEmbeddings()
+const vectorStore = await MemoryVectorStore.fromDocuments(nikeSplitDocs, embeddings)
+
+// retriever 
+const retriever = vectorStore.asRetriever({
+    k: 10
+})
+
+const retrievalChain = await createRetrievalChain({
+    combineDocsChain: chain,
+    retriever: retriever
+})  
+
+
+const input = 'Get me details on NIKE 2023 Annual meeting'
+// const input = 'What is LCEL?'
+const response = await retrievalChain.invoke({
     // context: 'LCEL stands for Langchain Expression language',
-    context: documents,
+    context: splitDocs,
     input
 })
 console.log(response)
