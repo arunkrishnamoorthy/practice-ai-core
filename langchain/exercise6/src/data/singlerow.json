@@ -1,0 +1,62 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "https://b-sap-hanes6.ortec.intranet:8443/sap/opu/odata/sap/SYCM_APS_C_ATC_FIND_ALP_CDS/sycm_aps_c_atc_find_alp('.1~001DD8B728D21FE095CBCFAAB554B0E8.2~001DD8B728C41FE095CBBAD38AB450EB')",
+          "uri": "https://b-sap-hanes6.ortec.intranet:8443/sap/opu/odata/sap/SYCM_APS_C_ATC_FIND_ALP_CDS/sycm_aps_c_atc_find_alp('.1~001DD8B728D21FE095CBCFAAB554B0E8.2~001DD8B728C41FE095CBBAD38AB450EB')",
+          "type": "SYCM_APS_C_ATC_FIND_ALP_CDS.sycm_aps_c_atc_find_alpType"
+        },
+        "ID": ".1~001DD8B728D21FE095CBCFAAB554B0E8.2~001DD8B728C41FE095CBBAD38AB450EB",
+        "item_id": "001dd8b7-28d2-1fe0-95cb-cfaab554b0e8",
+        "project_id": "001dd8b7-28c4-1fe0-95cb-bad38ab450eb",
+        "display_id": "001dd8b7-28d2-1fe0-95cb-bbaebdf790e8",
+        "priority": 3,
+        "crit_indicator": 0,
+        "check_title": "Usage of APIs",
+        "check_message": "Usage of classic API",
+        "obj_type": "CLAS",
+        "obj_name": "/ORTEC/CL_TLO_TOUR_POOL",
+        "package_name": "/ORTEC/TLO_UI",
+        "person_responsible": "MICHAELK",
+        "note_number": "N/A",
+        "has_quickfixes": "No Quickfixes Available",
+        "note_title": "N/A",
+        "application_component": "BC-DWB-UTL",
+        "referenced_object_type": "CLAS",
+        "referenced_object_name": "CL_GUI_LIST_TREE",
+        "simp_item_state_hidden": "X",
+        "simplification_item_state": "N/A",
+        "change_category_hidden": "X",
+        "change_category": "Not specified",
+        "additional_information": "N/A",
+        "check_class": "CL_YCM_CC_CHECK_API_USAGE",
+        "message_id": "CLSSIC",
+        "counter_fnd": "1",
+        "link_to_note": "",
+        "link_to_source_code": "https://B-SAP-HANES6.ortec.intranet:8443/sap/bc/adt/oo/classes/%2fortec%2fcl_tlo_tour_pool/source/main?sap-client=200#start=18710",
+        "usage_information": "Unknown",
+        "scope_information": "Not in scope",
+        "to_check_message_detail": {
+          "__metadata": {
+            "id": "https://b-sap-hanes6.ortec.intranet:8443/sap/opu/odata/sap/SYCM_APS_C_ATC_FIND_ALP_CDS/sycm_aps_i_atc_message_detail(item_id=guid'001dd8b7-28d2-1fe0-95cb-cfaab554b0e8',project_id=guid'001dd8b7-28c4-1fe0-95cb-bad38ab450eb',display_id=guid'001dd8b7-28d2-1fe0-95cb-bbaebdf790e8')",
+            "uri": "https://b-sap-hanes6.ortec.intranet:8443/sap/opu/odata/sap/SYCM_APS_C_ATC_FIND_ALP_CDS/sycm_aps_i_atc_message_detail(item_id=guid'001dd8b7-28d2-1fe0-95cb-cfaab554b0e8',project_id=guid'001dd8b7-28c4-1fe0-95cb-bad38ab450eb',display_id=guid'001dd8b7-28d2-1fe0-95cb-bbaebdf790e8')",
+            "type": "SYCM_APS_C_ATC_FIND_ALP_CDS.sycm_aps_i_atc_message_detailType"
+          },
+          "item_id": "001dd8b7-28d2-1fe0-95cb-cfaab554b0e8",
+          "project_id": "001dd8b7-28c4-1fe0-95cb-bad38ab450eb",
+          "display_id": "001dd8b7-28d2-1fe0-95cb-bbaebdf790e8",
+          "check_message_detail": "Usage of classic API\n\nCannot be suppressed using a pragma or pseudo-comment\nReferenced Object: CL_GUI_LIST_TREE (CLAS)\nReferenced Application Component: BC-DWB-UTL\nReferenced Package: SEU_TREE_CONTROL\nReferenced Software Component: SAP_BASIS\n"
+        },
+        "to_entry_points_for_object": {
+          "results": []
+        },
+        "to_ref_obj_name": {
+          "__deferred": {
+            "uri": "https://b-sap-hanes6.ortec.intranet:8443/sap/opu/odata/sap/SYCM_APS_C_ATC_FIND_ALP_CDS/sycm_aps_c_atc_find_alp('.1~001DD8B728D21FE095CBCFAAB554B0E8.2~001DD8B728C41FE095CBBAD38AB450EB')/to_ref_obj_name"
+          }
+        }
+      }
+    ]
+  }
+}
